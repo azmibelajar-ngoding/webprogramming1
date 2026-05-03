@@ -30,6 +30,6 @@ Cara menjalankan:
 
 Folder Structure:
 + /profile.html —————————— main file
-+ /style.css    —————————— styling
++ /styles.css    —————————— styling
 + /script.js    —————————— logic
 + /Image/profilepic.jpeg —————————— photo asset
