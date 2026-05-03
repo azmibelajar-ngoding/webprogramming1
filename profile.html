@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Profile</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="menu">
+                <img alt="Fotoku" src="Image/profilepic.jpeg">
+                <span class="title">Content Creator | Mahasiswa Sistem Informasi di UT</span>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#tentang">TENTANG</a></li>
+                        <li><a href="#pendidikan">PENDIDIKAN</a></li>
+                        <li><a href="#pengalaman">PENGALAMAN</a></li>
+                        <li><a href="#keterampilan">KETERAMPILAN</a></li>
+                        <li><a href="#hireme">HIRE ME?</a></li>
+                    </ul>
+                </nav>
+                <button class="popup-trigger">RINGKASAN PROFIL</button>
+            </div>
+            <section class="TENTANG" id="tentang">
+                <h1>Tentang Saya</h1>
+                <h3>DESKRIPSI</h3>
+                <div class="deskripsi">Halo, perkenalkan nama saya Azmi Yasid Alfarisi, boleh dipanggil Faris atau Azmi. Saya adalah konten kreator TikTok dan YouTube yang berfokus pada niche Cybersecurity, IT dan Sosial Media, fokus saya pada konten edukasi dan informasi serta memberantas kebodohan di media sosial.<br /><br />Di sini, saya juga sedang berkuliah di Universitas Terbuka prodi Sistem Informasi dan sudah semester 4, untuk belajarnya di rumah karena saya ambil paket SIPAS NON-TTM.</div>
+                <h3>KEINGINAN/GOALS</h3>
+                <div class="goalskeinginan">Singkat saja, ingin sukses hehehe...</div>
+            </section>
+            <section class="PENDIDIKAN" id="pendidikan">
+                <h1>Pendidikan</h1>
+                <section class="sekolah">
+                    <h3>Sekolah</h3>
+                    <div class="sekolah">Nama Sekolah</div>
+                    <span class="jurusan">Jurusan</span>
+                    <span class="openyearsch">Tahun masuk</span>
+                    <span class="closeyearsch">Tahun lulus</span>
+                    <div id="schoolprojects">proyek/pencapaian</div>
+                    <div class="list">
+                        <ul>
+                            <li>list 1</li>
+                            <li>list 2</li>
+                            <li>list 3</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="kampus">
+                    <h3>Kampus</h3>
+                    <div class="kampus">Nama Kampus</div>
+                    <span class="jurusan">Jurusan</span>
+                    <span class="openyearuniv">Tahun masuk</span>
+                    <span class="closeyearuniv">Tahun lulus</span>
+                    <div id="campusprojects">Proyek Kampus</div>
+                    <div class="list">
+                        <ul>
+                            <li>list 1</li>
+                            <li>list 2</li>
+                            <li>list 3</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section class="PENGALAMAN" id="pengalaman">
+                <h1>Pengalaman</h1>
+                <section class="company1">
+                    <div class="companyname">
+                        <h3>Nama Perusahaan 1</h3>
+                        <div class="position">Posisi</div>
+                        <div class="jobtype">Jenis Pekerjaan</div>
+                        <div class="masakerja">tahun mulai - tahun selesai</div>
+                        <div class="jobdesc">Deskripsi pekerjaan</div>
+                        <div class="tanggungjawab">
+                            <p>Tanggung Jawab</p>
+                            <ul>
+                                <li>list 1</li>
+                                <li>list 2</li>
+                                <li>list 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="company2">
+                    <div class="companyname">
+                        <h3>Nama Perusahaan 2</h3>
+                        <div class="position">Posisi</div>
+                        <div class="jobtype">Jenis Pekerjaan</div>
+                        <div class="masakerja">tahun mulai - tahun selesai</div>
+                        <div class="jobdesc">Deskripsi pekerjaan</div>
+                        <div class="tanggungjawab">
+                            <p>Tanggung Jawab</p>
+                            <ul>
+                                <li>list 1</li>
+                                <li>list 2</li>
+                                <li>list 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="KETERAMPILAN" id="keterampilan">
+                <h1>Keterampilan</h1>
+                <div class="softskills">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>list 1</li>
+                        <li>list 2</li>
+                        <li>list 3</li>
+                    </ul>
+                </div>
+                <div class="hardskills">
+                    <h3>Hard Skills</h3>
+                    <ul>
+                        <li>list 1</li>
+                        <li>list 2</li>
+                        <li>list 3</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="HIREME" id="hireme">
+                <div class="hiremeform">
+                    <h1>Hire Me</h1>
+                    <form action="action_page.php" method="get">
+                        <label for="yourname">Nama Anda:</label>
+                        <input type="text" id="yourname" name="yourname"><br><br>
+                        <label for="company">Nama Perusahaan:</label>
+                        <input type="text" id="company" name="company"><br><br>
+                        <label for="position">Posisi:</label>
+                        <input type="text" id="position" name="position"><br><br>
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" wrap="soft"></textarea><br><br>
+                        <button type="submit" class="button">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Popup Modal -->
+        <div id="profileModal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-header">
+                    <h2>Ringkasan Profil</h2>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nama:</strong> Azmi Yasid Alfarisi (Faris/Azmi)</p>
+                    <p><strong>Profesi:</strong> Content Creator (TikTok & YouTube)</p>
+                    <p><strong>Niche:</strong> Cybersecurity, IT, dan Sosial Media</p>
+                    <p><strong>Pendidikan:</strong> Mahasiswa Sistem Informasi, Universitas Terbuka (Semester 4)</p>
+                    <p><strong>Fokus:</strong> Konten edukasi & informasi, memberantas kebodohan di media sosial</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn modal-btn-secondary" onclick="document.getElementById('profileModal').classList.remove('active'); document.body.style.overflow = 'auto';">Tutup</button>
+                    <button class="modal-btn modal-btn-primary" onclick="location.href='#hireme'; document.getElementById('profileModal').classList.remove('active'); document.body.style.overflow = 'auto';">Hire Me</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
