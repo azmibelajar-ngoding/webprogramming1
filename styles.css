@@ -1,0 +1,416 @@
+:root {
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #0284c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--bg-card);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #334155;
+    z-index: 100;
+}
+
+.menu img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--accent);
+}
+
+.menu .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar li {
+    margin-bottom: 0.8rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--accent);
+    color: #fff;
+    padding-left: 1.5rem;
+}
+
+section {
+    margin-left: 280px;
+    padding-top: 1px;
+    padding-left: 1px;
+    max-width: 900px;
+}
+
+.TENTANG, .PENDIDIKAN, .PENGALAMAN, .KETERAMPILAN, .HIREME {
+    background-color: var(--bg-card);
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(211, 208, 208, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid var(--accent);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-left: 0.5px;
+    margin-bottom: 0.5px;
+    border-bottom: 2px solid #c4cedb;
+    padding-bottom: 0.5px;
+}
+
+h3 {
+    color: var(--accent);
+    margin-top: 1.5rem;
+    margin-right: 10px;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.deskripsi, .goalskeinginan {
+    width: 100%;
+    min-height: 100px;
+    background-color: #f0f0f000;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    margin-right: 0;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.deskripsi::-webkit-scrollbar, .goalskeinginan::-webkit-scrollbar {
+    display: none;
+}
+
+.sekolah, .kampus, .company1, .company2 {
+    margin: 1px;
+    padding-right: 10px;
+    border-bottom: 1px dashed #f3f8ff;
+}
+
+.sekolah:last-child, .kampus:last-child, .company2:last-child {
+    border-bottom: none;
+}
+
+.jurusan, .position {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.openyearsch, .closeyearsch, .openyearuniv, .closeyearuniv, .masakerja, .jobtype {
+    font-size: 0.9rem;
+    color: #f3f8ff;
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.list ul, .tanggungjawab ul, .softskills ul, .hardskills ul {
+    list-style-type: square;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    color: #f3f8ff;
+}
+
+.list li, .tanggungjawab li, .softskills li, .hardskills li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
+    
+    .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #334155;
+    }
+    
+    section {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    
+    .TENTANG, .PENDIDIKAN, .PENGALAMAN, .KETERAMPILAN {
+        padding: 1.5rem;
+    }
+}
+
+.hiremeform label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.hiremeform input, .hiremeform textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#pesan {
+  height: 150px;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+/* =============================================
+   POPUP / MODAL STYLES
+   ============================================= */
+
+/* Modal Overlay - Background */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: var(--bg-card);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+/* Modal Close Button */
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.modal-close:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Modal Header */
+.modal-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.modal-header h2 {
+    color: var(--accent);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Modal Body */
+.modal-body {
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+/* Modal Footer */
+.modal-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #334155;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Modal Button */
+.modal-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal-btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.modal-btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+.modal-btn-secondary {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.modal-btn-secondary:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Popup Trigger Button in Menu */
+.popup-trigger {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 0.5rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.popup-trigger:hover {
+    background: var(--accent-hover);
+    padding-left: 1.2rem;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+/* Scrollbar in Modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-close {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
