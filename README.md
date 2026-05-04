@@ -17,9 +17,11 @@ Fitur-fitur:
 
 Masih proses:
 1. Penyempurnaan desain UI untuk popup validasi di CSS.
-2. Perbaikan logika if-else pada JavaScript untuk validasi formulir agar lebih akurat.
-3. Melengkapi konten teks pada beberapa section yang masih kosong.
-4. Penambahan file php untuk menyimpan data formulir.
+2. Melengkapi konten teks pada beberapa section yang masih kosong.
+3. Penambahan file php untuk menyimpan data formulir.
+
+Update:
+1. Perbaikan bug formulir di Hire Me.
 
 Cara menjalankan:
 1. Clone repositori ini (git clone https://github.com/azmibelajar-ngoding/webprogramming1)
