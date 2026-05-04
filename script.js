@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
             let isValid = true;
             let errorMessages = [];
 
-            // Validate Name
-            if (nameField.value.trim()) {
+            // Validate Name (fixed bug)
+            if (nameField.value.trim() === '') {
                 nameField.style.borderColor = 'red';
                 isValid = false;
                 errorMessages.push('Nama Anda harus diisi');
@@ -108,8 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 nameField.style.borderColor = '#ccc';
             }
 
-            // Validate Company
-            if (companyField.value.trim()) {
+            // Validate Company (fixed bug)
+            if (companyField.value.trim() === '') {
                 companyField.style.borderColor = 'red';
                 isValid = false;
                 errorMessages.push('Nama Perusahaan harus diisi');
@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 companyField.style.borderColor = '#ccc';
             }
 
-            // Validate Position
-            if (positionField.value.trim()) {
+            // Validate Position (fixed bug)
+            if (positionField.value.trim() === '') {
                 positionField.style.borderColor = 'red';
                 isValid = false;
                 errorMessages.push('Posisi harus diisi');
