@@ -18,10 +18,11 @@ Fitur-fitur:
 Masih proses:
 1. Penyempurnaan desain UI untuk popup validasi di CSS.
 2. Melengkapi konten teks pada beberapa section yang masih kosong.
-3. Penambahan file php untuk menyimpan data formulir.
+3. Penyempurnaan Hamburger Menu untuk mobile.
 
 Update:
 1. Perbaikan bug formulir di Hire Me.
+2. Penambahan file php untuk simpan data di file txt pada directory internal.
 
 Cara menjalankan:
 1. Clone repositori ini (git clone https://github.com/azmibelajar-ngoding/webprogramming1)
@@ -34,4 +35,5 @@ Folder Structure:
 + /profile.html —————————— main file
 + /styles.css    —————————— styling
 + /script.js    —————————— logic
++ /action_page.php —————————— data collect
 + /Image/profilepic.jpeg —————————— photo asset
