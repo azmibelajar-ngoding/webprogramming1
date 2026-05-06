@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // -----------------------------------------
+    // ----------------------------------------- 
     // 0. POPUP / MODAL FUNCTIONALITY
     // -----------------------------------------
     const modalOverlay = document.getElementById('profileModal');
@@ -52,9 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
+
     
-    
-    // -----------------------------------------
+    // ----------------------------------------- 
     // 1. ACTIVE NAVIGATION HIGHLIGHTING
     // -----------------------------------------
     const sections = document.querySelectorAll('section[id]');
@@ -81,9 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', highlightNavigation);
 
-
-    // -----------------------------------------
-    // 2. FORM VALIDATION FOR HIRE ME
+    // ----------------------------------------- 
+    // 2. HIRE ME MODAL (VALIDATION) + FORM VALIDATION FOR PHP SUBMIT
     // -----------------------------------------
     const hireMeForm = document.querySelector('.hiremeform form');
     const hireMeModalOverlay = document.getElementById('hiremeformModal');
@@ -213,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // 3. MOBILE MENU TOGGLE
     // -----------------------------------------
     const menu = document.querySelector('.menu');
@@ -252,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // 4. SCROLL TO TOP BUTTON
     // -----------------------------------------
     const scrollTopBtn = document.createElement('button');
@@ -295,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // 5. NAVBAR STICKY EFFECT
     // -----------------------------------------
     const menuElement = document.querySelector('.menu');
@@ -312,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // RESPONSIVE HANDLER
     // -----------------------------------------
     function handleResponsive() {
@@ -341,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleResponsive(); // Initial check
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // ADDITIONAL: SMOOTH SCROLL WITH OFFSET
     // -----------------------------------------
     navLinks.forEach(link => {
@@ -366,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // ADDITIONAL: ANIMATE SECTIONS ON SCROLL
     // -----------------------------------------
     const animatedSections = document.querySelectorAll('.TENTANG, .PENDIDIKAN, .PENGALAMAN, .KETERAMPILAN, .HIREME');
@@ -393,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // ADDITIONAL: HOVER EFFECTS FOR BUTTONS
     // -----------------------------------------
     const submitButton = document.querySelector('.button');
@@ -409,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // -----------------------------------------
+    // ----------------------------------------- 
     // ADDITIONAL: SCROLL PROGRESS INDICATOR
     // -----------------------------------------
     const progressBar = document.createElement('div');
@@ -432,3 +431,4 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.width = scrollPercentage + '%';
     });
 });
+
