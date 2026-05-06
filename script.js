@@ -86,6 +86,41 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. FORM VALIDATION FOR HIRE ME
     // -----------------------------------------
     const hireMeForm = document.querySelector('.hiremeform form');
+    const hireMeModalOverlay = document.getElementById('hiremeformModal');
+    const hireMeModalCloseBtn = document.getElementById('hiremeformModalClose');
+    const hireMeModalX = hireMeModalOverlay ? hireMeModalOverlay.querySelector('.modal-close') : null;
+    const hireMeErrorsList = document.getElementById('hiremeformErrors');
+
+    function openHireMeModal() {
+        if (hireMeModalOverlay) {
+            hireMeModalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeHireMeModal() {
+        if (hireMeModalOverlay) {
+            hireMeModalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    if (hireMeModalOverlay) {
+        if (hireMeModalX) hireMeModalX.addEventListener('click', closeHireMeModal);
+        if (hireMeModalCloseBtn) hireMeModalCloseBtn.addEventListener('click', closeHireMeModal);
+
+        hireMeModalOverlay.addEventListener('click', function(e) {
+            if (e.target === hireMeModalOverlay) {
+                closeHireMeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && hireMeModalOverlay.classList.contains('active')) {
+                closeHireMeModal();
+            }
+        });
+    }
 
     if (hireMeForm) {
         hireMeForm.addEventListener('submit', function(e) {
@@ -99,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let isValid = true;
             let errorMessages = [];
 
-            // Validate Name (fixed bug)
+            // Validate Name
             if (nameField.value.trim() === '') {
                 nameField.style.borderColor = 'red';
                 isValid = false;
@@ -108,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 nameField.style.borderColor = '#ccc';
             }
 
-            // Validate Company (fixed bug)
+            // Validate Company
             if (companyField.value.trim() === '') {
                 companyField.style.borderColor = 'red';
                 isValid = false;
@@ -117,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 companyField.style.borderColor = '#ccc';
             }
 
-            // Validate Position (fixed bug)
+            // Validate Position
             if (positionField.value.trim() === '') {
                 positionField.style.borderColor = 'red';
                 isValid = false;
@@ -136,10 +171,35 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (isValid) {
-                alert('Terima kasih! Formulir berhasil dikirim.\n\nNama: ' + nameField.value + '\nPerusahaan: ' + companyField.value + '\nPosisi: ' + positionField.value);
-                hireMeForm.reset();
+                const formData = new FormData(hireMeForm);
+
+                fetch('action_page.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                        hireMeForm.reset();
+                    } else {
+                        alert('Error: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Ada masalah:', error);
+                    alert('Terjadi kesalahan koneksi. Silakan coba lagi.');
+                });
             } else {
-                alert('Mohon lengkapi semua field:\n• ' + errorMessages.join('\n• '));
+                if (hireMeErrorsList) {
+                    hireMeErrorsList.innerHTML = '';
+                    errorMessages.forEach(msg => {
+                        const li = document.createElement('li');
+                        li.textContent = msg;
+                        hireMeErrorsList.appendChild(li);
+                    });
+                }
+                openHireMeModal();
             }
         });
 
